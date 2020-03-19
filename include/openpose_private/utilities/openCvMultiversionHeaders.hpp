@@ -50,11 +50,11 @@
     #ifndef CV_LOAD_IMAGE_ANYDEPTH
         #define CV_LOAD_IMAGE_ANYDEPTH cv::IMREAD_ANYDEPTH
     #endif
-    #ifndef cv::IMREAD_COLOR
-        #define cv::IMREAD_COLOR cv::IMREAD_COLOR
+    #ifndef CV_LOAD_IMAGE_COLOR
+        #define CV_LOAD_IMAGE_COLOR cv::IMREAD_COLOR
     #endif
-    #ifndef cv::IMREAD_GRAYSCALE
-        #define cv::IMREAD_GRAYSCALE cv::IMREAD_GRAYSCALE
+    #ifndef CV_LOAD_IMAGE_GRAYSCALE
+        #define CV_LOAD_IMAGE_GRAYSCALE cv::IMREAD_GRAYSCALE
     #endif
 #endif
 

@@ -94,7 +94,7 @@ namespace op
             std::vector<std::pair<cv::Mat, std::string>> imageAndPaths;
             for (const auto& imagePath : imagePaths)
             {
-                imageAndPaths.emplace_back(std::make_pair(cv::imread(imagePath, cv::IMREAD_COLOR), imagePath));
+                imageAndPaths.emplace_back(std::make_pair(cv::imread(imagePath, CV_LOAD_IMAGE_COLOR), imagePath));
                 if (imageAndPaths.back().first.empty())
                     error("Image could not be opened from path `" + imagePath + "`.",
                           __LINE__, __FUNCTION__, __FILE__);
