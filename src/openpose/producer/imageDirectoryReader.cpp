@@ -58,7 +58,7 @@ namespace op
         try
         {
             // Read frame
-            auto frame = loadImage(mFilePaths.at(mFrameNameCounter++).c_str(), CV_LOAD_IMAGE_COLOR);
+            auto frame = loadImage(mFilePaths.at(mFrameNameCounter++).c_str(), cv::IMREAD_COLOR);
             // Skip frames if frame step > 1
             const auto frameStep = Producer::get(ProducerProperty::FrameStep);
             if (frameStep > 1)
