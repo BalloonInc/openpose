@@ -717,8 +717,8 @@ if (UNIX OR APPLE)
       # Build Process
       set(CAFFE_CPU_ONLY OFF)
       if (${GPU_MODE} MATCHES "CUDA")
-        # execute_process(COMMAND git checkout master WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
-        execute_process(COMMAND git checkout c95002f WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
+        execute_process(COMMAND git checkout master WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
+        # execute_process(COMMAND git checkout c95002f WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
       elseif (${GPU_MODE} MATCHES "CPU_ONLY")
         if (USE_MKL)
           #execute_process(COMMAND git checkout intel WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
@@ -753,8 +753,8 @@ if (UNIX OR APPLE)
             "${CMAKE_BINARY_DIR}/caffe/lib/libmkldnn.so"
             )
         else (USE_MKL)
-          # execute_process(COMMAND git checkout master WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
-          execute_process(COMMAND git checkout c95002f WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
+          execute_process(COMMAND git checkout master WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
+          # execute_process(COMMAND git checkout c95002f WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/3rdparty/caffe)
         endif (USE_MKL)
         set(CAFFE_CPU_ONLY ON)
         set(USE_CUDNN OFF)
@@ -786,11 +786,11 @@ if (UNIX OR APPLE)
           -DCPU_ONLY=${CAFFE_CPU_ONLY}
           -DCMAKE_BUILD_TYPE=Release
           -DBUILD_docs=OFF
-          -DBUILD_python=OFF
-          -DBUILD_python_layer=OFF
+          -DBUILD_python=ON
+          -DBUILD_python_layer=ON
           -DUSE_LEVELDB=OFF
           -DUSE_LMDB=OFF
-          -DUSE_OPENCV=OFF)
+          -DUSE_OPENCV=ON)
           # -DOpenCV_DIR=${OpenCV_DIR})
       else (USE_MKL)
         ExternalProject_Add(openpose_lib
@@ -805,11 +805,11 @@ if (UNIX OR APPLE)
           -DCPU_ONLY=${CAFFE_CPU_ONLY}
           -DCMAKE_BUILD_TYPE=Release
           -DBUILD_docs=OFF
-          -DBUILD_python=OFF
-          -DBUILD_python_layer=OFF
+          -DBUILD_python=ON
+          -DBUILD_python_layer=ON
           -DUSE_LEVELDB=OFF
           -DUSE_LMDB=OFF
-          -DUSE_OPENCV=OFF)
+          -DUSE_OPENCV=ON)
           # -DOpenCV_DIR=${OpenCV_DIR})
       endif (USE_MKL)
 
