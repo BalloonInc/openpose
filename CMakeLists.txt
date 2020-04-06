@@ -788,8 +788,8 @@ if (UNIX OR APPLE)
           -DBUILD_docs=OFF
           -DBUILD_python=ON
           -DBUILD_python_layer=ON
-          -DUSE_LEVELDB=OFF
-          -DUSE_LMDB=OFF
+          -DUSE_LEVELDB=ON
+          -DUSE_LMDB=ON
           -DUSE_OPENCV=ON)
           # -DOpenCV_DIR=${OpenCV_DIR})
       else (USE_MKL)
@@ -807,8 +807,8 @@ if (UNIX OR APPLE)
           -DBUILD_docs=OFF
           -DBUILD_python=ON
           -DBUILD_python_layer=ON
-          -DUSE_LEVELDB=OFF
-          -DUSE_LMDB=OFF
+          -DUSE_LEVELDB=ON
+          -DUSE_LMDB=ON
           -DUSE_OPENCV=ON)
           # -DOpenCV_DIR=${OpenCV_DIR})
       endif (USE_MKL)
